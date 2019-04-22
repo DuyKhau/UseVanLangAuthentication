@@ -25,7 +25,7 @@ namespace Microsoft.Owin.Security.VanLang
 			Caption = Constants.DefaultAuthenticationName;
 			CallbackPath = new PathString("/signin-vanlang");
 			AuthenticationMode = AuthenticationMode.Passive;
-			baseUrl = baseUrl.TrimEnd('/');
+			Constants.BaseUrl = baseUrl = baseUrl.TrimEnd('/');
 			AuthorizationEndpoint = baseUrl + Constants.AuthorizationEndpoint;
 			UserInformationEndpoint = baseUrl + Constants.UserInformationEndpoint;
 		}
